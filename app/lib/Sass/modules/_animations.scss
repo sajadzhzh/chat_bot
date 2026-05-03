@@ -1,0 +1,26 @@
+@keyframes toRight {
+    from{
+        right: 0;
+    }
+    to{
+        right: -50%;
+    }
+}
+@keyframes toLeft {
+    from{
+        right: -50%;
+    }
+    to{
+        right: 0;
+    }
+}
+
+.animation{
+    &__toRight{
+        animation: toRight 0.25s;
+    }
+
+    &__toLeft{
+        animation: toLeft 0.25s;
+    }
+}

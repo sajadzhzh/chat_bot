@@ -1,0 +1,33 @@
+.btn{
+    cursor: pointer;
+    border: 1px solid;
+    padding: calc(2 * var(--spacing)) 0;
+    border-radius: var(--border-rad-normall);
+
+    &__login{
+        width: 50%;
+
+        &:hover{
+            background-color: var(--shadow);
+        }
+
+        &.border0{
+            border: unset;
+        }
+
+        &.active{
+            background-color: var(--shadow);
+        }
+    }
+
+    &__submit{
+        width: 100%;
+        background-color: var(--bg-primary);
+        color: var(--font-light);
+
+        &:hover{
+            background-color: var(--bg-active);
+            color: var(--font-active);
+        }
+    }
+}
