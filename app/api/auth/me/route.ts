@@ -1,10 +1,9 @@
 import { verifyToken } from "@/app/lib/Security/Token";
-import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function GET(request : Request) {
-  const beaerarToken =await request.headers.get("authorization")
-  const split = beaerarToken?.split(" ") || ""
+  const bearerToken =await request.headers.get("authorization")
+  const split = bearerToken?.split(" ") || ""
   const token = split[1] || ""
   
   if (!token) {

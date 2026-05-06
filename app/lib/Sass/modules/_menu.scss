@@ -7,14 +7,14 @@
   margin-block: calc(4 * var(--spacing));
   overflow-x: hidden;
   overflow-y: scroll;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 
   &__item {
-    width: 90%;
-    max-width: 95%;
+    width: 100%;
     word-wrap: normal;
     padding: calc(2 * var(--spacing)) calc(4 * var(--spacing));
     border-radius: var(--border-rad-normall);
+    cursor: pointer;
 
     &.active{
         background-color: var(--bg-active);

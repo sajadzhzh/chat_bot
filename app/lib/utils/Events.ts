@@ -14,3 +14,9 @@ export const toggleTheme = () => {
   
   window.dispatchEvent(new Event("themeChanged"));
 };
+
+export const toggleMenu = () => {
+  const container = document.querySelector(".Container__menu");
+  container?.classList.toggle("active");
+  
+};

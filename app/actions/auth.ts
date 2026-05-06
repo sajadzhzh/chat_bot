@@ -118,7 +118,7 @@ export async function me() {
 
   try {
     const req = await getFetch("auth/me", {
-      Authorization: `Bearar ${token.value}`,
+      Authorization: `Bearer ${token.value}`,
     });
 
     if (req.status === "success") {

@@ -1,0 +1,11 @@
+.message{
+    width: max-content;
+    padding: calc(2 * var(--spacing)) calc(4 * var(--spacing));
+    background-color: var(--msg-bg-light);
+    border-radius: var(--border-rad-normall);
+    box-shadow: 0 0 9px var(--shadow);
+
+    &__answer{
+        margin-inline-start: auto;
+    }
+}

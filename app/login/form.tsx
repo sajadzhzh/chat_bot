@@ -20,7 +20,7 @@ export default function LoginForm() {
       case "success":
         toast.success(state.message);
         loginContext(state.user);
-        state.redirect && router.push(state.redirect);
+        state.redirect && router.push(state.redirect + "?new_chat=true");
         break;
     }
   }, [state]);

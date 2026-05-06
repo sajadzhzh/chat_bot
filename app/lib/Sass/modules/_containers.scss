@@ -26,34 +26,40 @@
       .Container__parallel {
         background-color: var(--con-bg-dark);
       }
-
-      .logo__text{
+      .message {
+        background-color: var(--msg-bg-dark);
+      }
+      .userInput {
+        background-color: var(--msg-bg-dark);
+      }
+      .logo__text {
         color: var(--font-light);
       }
-      
     }
   }
 
   &__menu {
-    width: 0;
-    display: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    right: -100%;
     height: 98svh;
     border: 1px solid;
     box-shadow: 2px 4px 8px var(--shadow);
     background-color: var(--con-bg-light);
     border-radius: var(--border-rad-normall);
     padding: calc(2 * var(--spacing)) calc(3 * var(--spacing));
+    position: absolute;
 
     &.active {
-      top: 0;
       right: 0;
       width: 100%;
-      display: flex;
-      position: absolute;
     }
-
+    
     @media screen and (width >= 768px) {
       width: 20%;
+      right: 0;
+      position: static;
       display: flex;
       flex-direction: column;
     }
@@ -62,39 +68,42 @@
   &__chat {
     width: 100%;
     display: flex;
-    height: 98svh;
+    flex-direction: column;
+    gap: calc(2 * var(--spacing));
+    height: 90svh;
     border: 1px solid;
+    overflow-y: scroll;
+    scrollbar-width: none;
     box-shadow: 2px 4px 8px var(--shadow);
     background-color: var(--con-bg-light);
     border-radius: var(--border-rad-normall);
-    padding: calc(2 * var(--spacing)) calc(3 * var(--spacing));
+    padding: calc(5 * var(--spacing)) calc(4 * var(--spacing));
 
     @media screen and (width >= 768px) {
-      width: 79%;
-      margin-inline-start: auto;
+      padding: calc(5 * var(--spacing)) calc(10 * var(--spacing));
     }
   }
 
-  &__auth{
+  &__auth {
     width: 100%;
     border: 1px solid;
     border-radius: var(--border-rad-normall);
     padding: calc(5 * var(--spacing)) calc(10 * var(--spacing));
     background-color: var(--con-bg-light);
 
-    &.border0{
+    &.border0 {
       border: unset;
     }
     @media screen and (width >= 768px) {
       width: fit-content;
 
-      &.parallel{
+      &.parallel {
         width: 100%;
       }
     }
   }
 
-  &__parallel{
+  &__parallel {
     width: 100%;
     border: 1px solid;
     border-radius: var(--border-rad-normall);
@@ -103,5 +112,10 @@
     @media screen and (width >= 768px) {
       width: 70%;
     }
+  }
+
+  &__input {
+    width: 100%;
+    padding-top: 1rem;
   }
 }

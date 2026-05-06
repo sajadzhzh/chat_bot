@@ -1,0 +1,10 @@
+.userInput{
+    width: 95%;
+    padding: calc(2 * var(--spacing)) calc(4 * var(--spacing));
+    background-color: var(--msg-bg-light);
+    border: 1px solid;
+    border-radius: var(--border-rad-full);
+    outline: unset;
+    box-shadow: 0 0 9px var(--shadow);
+}
+
